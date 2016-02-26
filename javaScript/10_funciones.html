@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	Funciones</title>
+</head>
+<body>
+
+     <h1>Funciones</h1>
+     <fieldset>
+     	<legend>
+     		<h2>
+     			Sumar
+     		</h2>
+     	</legend>
+     	<input type="text" id="n1" placeholder="Numero 1">
+     	<input type="text" id="n2" placeholder="Numero 2">
+     	<button onclick="sumar()">Calcular</button>
+     	<output id="res"></output>
+     </fieldset>
+     <script>
+
+         function sumar() {
+         	var n1     = document.getElementById('n1').value;
+         	var n2     = document.getElementById('n2').value;
+         	var salida = document.getElementById('salida').value;
+         	var rs     = parseInt(n1)+parseInt(n2);
+         	alert('La suma es: '+rs);
+         }
+
+     </script>
+
+</body>
+</html>

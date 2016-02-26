@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reto Funciones</title>
+</head>
+<style>
+	    body {
+	    	font: 14px Arial;
+	    }
+
+	    fieldset {
+	    	border: 4px solid #eee;
+	    	margin: 100px auto;
+	    	padding: 10px;
+	    	width: 200px;
+	    }
+
+	    input, output, button, select{
+	    	display: block;
+	    	padding: 10px;
+	    	width: 180px;
+	    }
+
+	    button {
+	    	width: 204px;
+	    }
+
+
+	</style>
+<body>
+<fieldset>
+<legend>
+	<h1>Operaciones</h1>
+</legend>
+        <input type="text" id="n1" placeholder="Numero 1">
+     	<input type="text" id="n2" placeholder="Numero 2">
+
+     	<select name="operacines">
+               <option value='1'>Suma</option> 
+               <option value='2'>Resta</option> 
+               <option value='3'>Multiplicar</option>
+               <option value='4'>Dividir</option> 
+        </select>
+        <button onclick="calcular()">Calcular</button>
+        <output id="resp"></output>
+</fieldset>
+
+<script>
+    function sumar(n1, n2) {
+    	return parseInt(n1)+parseInt(n2);
+    }
+
+    function restar(n1, n2) {
+    	return n1-n2;
+    }
+
+    function multiplicar(n1, n2) {
+    	return n1*n2;
+    }
+
+    function dividir(n1, n2) {
+    	return n1/n2;
+    }
+	function calcular() {
+        var n1 = document.getElementById('n1').value;
+        var n2 = document.getElementById('n2').value;
+		var opc = document.getElementById('opc');
+
+    if(opc ==1) { resp.innerHTML = "Sumas es: "+sumar(n1, n2);               }
+    if(opc ==2) { resp.innerHTML = "Resta es: "+restar(n1, n2);              }
+    if(opc ==3) { resp.innerHTML = "Multiplicacion es: "+multiplicar(n1, n2);}
+	if(opc ==4) { resp.innerHTML = "Division es: "+dividir(n1, n2);          }
+	}
+</script>
+
+</body>
+</html>

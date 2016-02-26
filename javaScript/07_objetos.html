@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objetos</title>
+	<style>
+     body{
+
+     	background-color:purple;
+     	font: 16px tahoma;
+     }
+     ul{
+
+     	background-color:violet;
+     	display: inline-block;
+     	list-style: none;
+     	margin: 0px 20px;
+     	padding: 20px;
+     }
+     ul li{
+     	border-bottom: 3px solid purple;
+     	padding: 10px;
+     }
+	</style>
+</head>
+<body>
+<h1><center>Objetos</h1>
+<hr>
+<ul id="lista1"></ul>
+<ul id="lista2"></ul>
+<script>
+	var pokemon1 = {
+		nombre: "pikachu",
+		edad : 12,
+		tipo :"electrico",
+		evolucion: "raichu",
+		salud:100,
+		ataque :70,
+		defensa: 30,
+		atacar: function() {
+            pokemon2.salud = pokemon2.salud - (this.ataque - pokemon2.defensa);
+		}
+	} 
+	var pokemon2 = {
+		nombre: "Charmander",
+		edad : 14,
+		tipo :"Fuego",
+		evolucion: "Charizard",
+		salud:100,
+		ataque :80,
+		defensa: 40,
+		atacar: function() {
+		  pokemon1.salud = pokemon1.salud - (this.ataque - pokemon1.defensa);
+		}
+	} 
+	pokemon1.atacar();
+	pokemon2.atacar();
+	pokemon1.atacar();
+	pokemon2.atacar();
+
+	var datos1 =  "<li><h2>POKEMON 1</h2></li>";
+	    datos1 += "<li>nombre:"     +pokemon1.nombre+      "</li>";
+	    datos1 += "<li>edad:"       +pokemon1.edad+        "</li>";
+	    datos1 += "<li>tipo:"       +pokemon1.tipo+        "</li>";
+	    datos1 += "<li>evolucion:"  +pokemon1.evolucion+   "</li>";
+	    datos1 += "<li>salud    :"  +pokemon1.salud+       "</li>";
+	    datos1 += "<li>ataque:"     +pokemon1.ataque+      "</li>";
+	    datos1 += "<li>defensa:"    +pokemon1.defensa+     "</li>";
+
+
+    var datos2 =  "<li><h2>POKEMON 2</h2></li>";
+	    datos2 += "<li>nombre:"     +pokemon2.nombre+      "</li>";
+	    datos2 += "<li>edad:"       +pokemon2.edad+        "</li>";
+	    datos2 += "<li>tipo:"       +pokemon2.tipo+        "</li>";
+	    datos2 += "<li>evolucion:"  +pokemon2.evolucion+   "</li>";
+	    datos2 += "<li>salud    :"  +pokemon2.salud+       "</li>";
+	    datos2 += "<li>ataque:"     +pokemon2.ataque+      "</li>";
+	    datos2 += "<li>defensa:"    +pokemon2.defensa+     "</li>";
+
+	document.getElementById('lista1').innerHTML = datos1;
+
+	document.getElementById('lista2').innerHTML = datos2;
+</script>
+</body>
+</html>

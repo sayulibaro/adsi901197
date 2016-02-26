@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+	<title>Media Queries</title>
+	<style>
+	body {
+		font: 16px Tahoma;
+	}
+
+	section.page {
+		border: 10px solid #80a553;
+	}
+
+	section.page p {
+		text-align: justify;
+		line-height: 22px;
+
+	}
+
+	.res { display: none;}
+
+	@media (max-width: 1280px) {
+		section.page {
+			background-color: #c0f87d;
+		}
+		.res { display: none;}
+		.res1280 { display: inline;}
+	}
+
+	@media (max-width: 1024px) {
+		section.page {
+			background-color: #f8f393;
+		}
+		.res { display: none;}
+		.res1024 { display: inline;}
+	}
+
+	@media (max-width: 800px) {
+		section.page {
+			background-color: #acabf8;
+		}
+		.res { display: none;}
+		.res800 { display: inline;}
+	}
+
+	@media (max-width: 600px) {
+		section.page {
+			background-color: #f8a7d3;
+		}
+		.res { display: none;}
+		.res600 { display: inline;}
+	}
+
+
+	</style>
+</head>
+<body>
+<section class="page">
+	<h1>
+		Media Queries l Resolucion Detectada:
+		<span class='res res1280'>1280px</span>
+		<span class='res res1024'>1024px</span>
+		<span class='res res800'>800px</span>
+		<span class='res res600'>600px</span>
+	</h1>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</p>
+</section>
+
+</body>
+</html>
